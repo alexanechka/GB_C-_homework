@@ -21,10 +21,10 @@ matrix[2, 1] = 4;
 matrix[2, 2] = 2;
 matrix[2, 3] = 4;
 
-for (int i = 0; i < matrix.GetLength(0); i++)
+for (int i = 0; i < matrix.GetLength(1); i++)
 {
     double average = 0;
-    int columns = matrix.GetLength(1);
+    int columns = matrix.GetLength(0);
     for (int j = 0; j < columns; j++)
     {
         average = matrix[j, i] + average;
