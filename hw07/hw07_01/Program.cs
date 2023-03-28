@@ -12,20 +12,20 @@ int ReadUserInput(string userString)
     return value;
 }
 
-int[,] GetMatrix(int m, int n)
+double[,] GetMatrix(int m, int n)
 {
-    int[,] matrix = new int[m, n];
+    double[,] matrix = new double[m, n];
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            matrix[i, j] = Random.Shared.Next(-150, 150);//int.MinValue, int.MaxValue);
+            matrix[i, j] = Random.Shared.NextDouble();//int.MinValue, int.MaxValue);
         }
     }
     return matrix;
 }
 
-void PrintMatrix(int[,] matrix)
+void PrintMatrix(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -47,5 +47,5 @@ void PrintMatrix(int[,] matrix)
 int m = ReadUserInput("Введите число строк ");
 int n = ReadUserInput("Введите число колонок ");
 
-int[,] matrix = GetMatrix(m, n);
+double[,] matrix = GetMatrix(m, n);
 PrintMatrix(matrix);
